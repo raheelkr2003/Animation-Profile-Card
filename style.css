@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    margin-right: 15px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    width: 600px;
+    height: 400px;
+    transition-delay: 0.5s;
+}
+
+.card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: white;
+    border: 8px solid #ff9804;
+    filter: drop-shadow(0 0 20px #ff9804) drop-shadow(0 0 60px #ff9804);
+    transition: 0.5s, background 0.5s;
+    transition-delay: 0.75s, 1s;
+    background-image: url('./image.png');
+    background-size: cover; /* Adjust the image to cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.card:hover .circle::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition-delay: 0.5s;
+    background: white;
+}
+
+.card .circle .profile-image {
+    position: relative;
+    width: 250px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.card:hover .circle .profile-image {
+    transform: scale(0);
+    transition: 0s;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    color: white;
+}
+
+.card:hover .content {
+    transition-delay: 0.75s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.card .details {
+    width: 60%;
+    color: #ff9804;
+}
+
+.card .content h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card .content p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.card .social-icons a {
+    text-decoration: none;
+    color: #ff9804;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.card .profile-image-right {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.5s;
+}
