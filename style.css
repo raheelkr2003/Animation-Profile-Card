@@ -56,11 +56,11 @@ body {
     height: 350px;
     border-radius: 50%;
     background: white;
-    border: 8px solid #ff9804;
-    filter: drop-shadow(0 0 20px #ff9804) drop-shadow(0 0 60px #ff9804);
+    border: 8px solid hsl(0, 0%, 75%);
+    filter: drop-shadow(0 0 100px #162576) drop-shadow(0 0 60px #162576);
     transition: 0.5s, background 0.5s;
     transition-delay: 0.75s, 1s;
-    background-image: url('./image.png');
+    background-image: url('./image.jpg');
     background-size: cover; /* Adjust the image to cover the entire container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -94,7 +94,7 @@ body {
     align-items: center;
     padding: 20px;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0s;
     visibility: hidden;
     color: white;
 }
@@ -107,7 +107,7 @@ body {
 
 .card .details {
     width: 60%;
-    color: #ff9804;
+    color: #162576;
 }
 
 .card .content h2 {
@@ -124,7 +124,7 @@ body {
 
 .card .social-icons a {
     text-decoration: none;
-    color: #ff9804;
+    color: #162576;
     margin: 0 10px;
     font-size: 1.5em;
     margin-bottom: 5px;
